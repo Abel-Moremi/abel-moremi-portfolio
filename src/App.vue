@@ -6,10 +6,10 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from './components/Minimal.vue'
 
 export default {
-  name: 'App',
+  name: 'Minimal',
   components: {
     HelloWorld
   }
