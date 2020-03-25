@@ -1,48 +1,43 @@
 export var main = {
-    name: 'Your Name',
-    mail: 'your.mail@gmail.com',
-    img: 'https://organicthemes.com/demo/profile/files/2018/05/profile-pic.jpg',
+    name: 'Abel Moremi',
+    mail: 'abelmoremiz@gmail.com',
+    img: 'https://media-exp1.licdn.com/dms/image/C5603AQE5eqcZPQRjAQ/profile-displayphoto-shrink_200_200/0?e=1590624000&v=beta&t=XPwYy2O17HJS_eYGeOMVS6-A2kjBOnSTCMNblsRItY8',
     role: ['Full Stack Developer'],
     // Refer https://ionicons.com/ and put the icon name inside iconName key
     connects: [
       {
-        name: 'Home',
-        iconName: 'logo-firefox',
-        link: 'https://sivanesh-s.github.io'
-      },
-      {
         name: 'Github',
-        iconName: 'logo-github',
-        link: 'https://github.com/sivanesh-s'
+        iconName: 'logo-octocat',
+        link: 'https://github.com/Abel-Moremi'
       },
       {
         name: 'Linkedin',
         iconName: 'logo-linkedin',
-        link: 'https://www.linkedin.com/in/sivanesh-shanmugam/'
+        link: 'https://www.linkedin.com/in/abel-moremi/'
       },
       {
         name: 'StackOverflow',
         iconName: 'logo-stackoverflow',
-        link: 'https://stackoverflow.com/users/6940525/sivanesh-s'
+        link: 'https://stackoverflow.com/users/9463524/abel-moremi'
       },
       {
         name: 'Twitter',
         iconName: 'logo-twitter',
-        link: 'https://twitter.com/sivanesh_fiz'
+        link: 'https://twitter.com/MoremiAbel'
       },
       {
-        name: 'npm',
-        iconName: 'logo-npm',
-        link: 'https://www.npmjs.com/~sivanesh_s'
+        name: 'Dev.to',
+        iconName: 'code-slash-outline',
+        link: 'https://dev.to/abelmoremi'
       },
       {
         name: 'Mail',
         iconName: 'mail-outline',
-        link: `mailto:${'yourmail@gmail.com'}?Subject=Hello%20again`
+        link: `mailto:${'abelmoremiz@gmail.com'}?Subject=Hello%20again`
       }
     ],
     links: [
-      { name: 'Projects', link: '#projects' },
+      { name: 'Projects', link: 'https://github.com/Abel-Moremi?tab=repositories' },
       { name: 'Blogs', link: '#blogs' }
     ]
   };

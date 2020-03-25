@@ -37,9 +37,11 @@ export default {
     main
   }),
   mounted() {
+
+    
     const getDOM = selector => () => {
-    return document.querySelector(selector);
-  };
+      return document.querySelector(selector);
+    };
   
   document.title = `${main.name} | ${main.role}`
   
@@ -129,5 +131,6 @@ export default {
     top: 50vh;
     transform: translateY(-50%);
   }
+
 }
 </style>
