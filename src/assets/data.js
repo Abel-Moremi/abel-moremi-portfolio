@@ -38,6 +38,6 @@ export var main = {
     ],
     links: [
       { name: 'Projects', link: 'https://github.com/Abel-Moremi?tab=repositories' },
-      { name: 'Blogs', link: '#blogs' }
+      { name: 'Blogs', link: 'https://medium.com/@zozo9421' }
     ]
   };
