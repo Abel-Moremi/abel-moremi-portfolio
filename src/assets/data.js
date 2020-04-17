@@ -21,6 +21,11 @@ export var main = {
         link: 'https://stackoverflow.com/users/9463524/abel-moremi'
       },
       {
+        name: 'Code Pen',
+        iconName: 'logo-codepen',
+        link: 'https://codepen.io/abel-moremi'
+      },
+      {
         name: 'Twitter',
         iconName: 'logo-twitter',
         link: 'https://twitter.com/MoremiAbel'
