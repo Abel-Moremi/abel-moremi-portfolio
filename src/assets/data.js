@@ -1,7 +1,7 @@
 export var main = {
     name: 'Abel Moremi',
     mail: 'abelmoremiz@gmail.com',
-    img: 'https://media-exp1.licdn.com/dms/image/C5603AQE5eqcZPQRjAQ/profile-displayphoto-shrink_200_200/0?e=1590624000&v=beta&t=XPwYy2O17HJS_eYGeOMVS6-A2kjBOnSTCMNblsRItY8',
+    img: 'https://i.stack.imgur.com/4LvFW.jpg?s=328&g=1',
     role: ['Full Stack Developer'],
     // Refer https://ionicons.com/ and put the icon name inside iconName key
     connects: [
