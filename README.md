@@ -1,6 +1,4 @@
-# personal-portfolio
-
-> My wicked Nuxt.js project
+# portfolio
 
 ## Build Setup
 
