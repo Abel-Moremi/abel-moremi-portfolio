@@ -1,7 +1,4 @@
 steps:
-# Install
-- name: 'gcr.io/cloud-builders/npm'
-  args: ['install']
-# Build
-- name: 'gcr.io/cloud-builders/npm'
-  args: ['run', 'build', '--prod']
+ # build the container 
+ - name: 'gcr.io/cloud-builders/docker'
+   args: ['build', '--network=cloudbuild','-t', 'gcr.io/abel-moremi-portfolio/portfolio-server', '.']

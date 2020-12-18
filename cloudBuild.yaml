@@ -1,10 +1,12 @@
 steps:
-# Install
-- name: 'gcr.io/cloud-builders/npm'
-  args: ['install']
-# Build
-- name: 'gcr.io/cloud-builders/npm'
-  args: ['run', 'build', '--prod']
-# Deploy
-- name: 'gcr.io/$PROJECT_ID/firebase'
-  args: ['deploy']
+ # build the container 
+ - name: 'gcr.io/cloud-builders/docker'
+   args: ['build', '--network=cloudbuild','-t', 'gcr.io/abel-moremi-portfolio/portfolio-server', '.']
+ # push the container image to Container Registry
+ - name: 'gcr.io/cloud-builders/docker'
+   args: ['push', 'gcr.io/abel-moremi-portfolio/portfolio-server']
+ # Deploy container image to Cloud Run
+ - name: 'gcr.io/cloud-builders/gcloud'
+   args: ['run', 'deploy', 'portfolio-server', '--image', 'gcr.io/abel-moremi-portfolio/portfolio-server', '--region', 'us-central1', '--platform', 'managed', '--port 3000']
+images: 
+- 'gcr.io/abel-moremi-portfolio/portfolio-server'
