@@ -1,27 +1,38 @@
 <template>
   <div>
-    <div class="title">
-      <h1>Welcome to My Radio Show</h1>
+    <div class="hero">
+      <div class="container">
+        <h1>Welcome to my Blog</h1>
+        <p class="subtitle">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, modi. Maxime explicabo neque odio facilis.
+        </p>
+        <nuxt-link to="/contact" class="hire">
+          Hire me
+        </nuxt-link>
+      </div>
     </div>
     <div class="container">
-      <div v-for="post in filteredList" v-bind:key="post" class="max-w-sm rounded overflow-hidden shadow-lg p-1">
-        <img
-          class="w-full"
-          :src="post.mediaCover.url"
-          alt=""
-          width="300"
-          height="300"
-        >
-        <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2">
-            {{ post.title }}
-          </div>
-          <p class="text-gray-700 text-base">
-            {{ post.content }}
-            {{ post.publishedAt }}
-          </p>
-        </div>
-      </div>
+      <main>
+        <h2>
+          Latest thoughts
+        </h2>
+        <ul>
+          <li v-for="post in filteredList" :key="post.id">
+            <img :src="post.mediaCover.url" alt="Post Cover Photo">
+            <div class="content">
+              <span>
+                {{ post.publishedAt }}
+              </span>
+              <nuxt-link :to="{ path: post.slug }">
+                {{ post.title }}
+              </nuxt-link>
+              <p>
+                {{ post.excerpt }}
+              </p>
+            </div>
+          </li>
+        </ul>
+      </main>
     </div>
   </div>
 </template>
@@ -57,33 +68,5 @@ export default {
 @apply min-h-screen flex justify-center items-center text-center mx-auto;
 }
 */
-.container {
-  margin: 0 auto;
-  min-height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  padding: top 1rem;
-  text-align: center;
-  font-size: 50px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-.links {
-  padding-top: 15px;
-}
+
 </style>

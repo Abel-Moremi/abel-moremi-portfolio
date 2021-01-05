@@ -2,6 +2,7 @@ query Posts {
   posts {
     id
     title
+    excerpt
     publishedAt
     Content
     mediaCover {
