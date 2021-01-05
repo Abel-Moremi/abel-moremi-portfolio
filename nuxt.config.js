@@ -33,7 +33,8 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
-    '@nuxtjs/apollo'
+    '@nuxtjs/apollo',
+    '@nuxtjs/style-resources'
   ],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
@@ -53,5 +54,11 @@ export default {
       }
     }
   },
+
+  styleResources: {
+    scss: [
+      '~assets/scss/_colors.scss'
+    ]
+  }
 }
 
