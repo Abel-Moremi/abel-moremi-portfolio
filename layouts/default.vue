@@ -93,7 +93,7 @@ header {
 
 @media only screen and (min-width: 768px) {
   body{
-    font-size: 10px;
+    font-size: 18px;
   }
 }
 </style>
