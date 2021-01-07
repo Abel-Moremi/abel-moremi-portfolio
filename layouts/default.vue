@@ -47,6 +47,10 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  background: #ececec;
+}
+
 *,
 *::before,
 *::after {
