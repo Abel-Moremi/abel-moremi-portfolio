@@ -34,7 +34,8 @@ export default {
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     '@nuxtjs/apollo',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    '@nuxtjs/markdownit'
   ],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
@@ -70,6 +71,13 @@ export default {
     scss: [
       '~assets/scss/_colors.scss'
     ]
+  },
+
+  markdownit: {
+    preset: 'default',
+    linkify: true,
+    breaks: true,
+    injected: true
   }
 }
 

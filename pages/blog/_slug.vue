@@ -1,18 +1,19 @@
 <template>
   <div class="container">
-    <main>
+    <main v-if="posts[0]">
       <h1>
         {{ posts[0].title }}
-        <div class="content">
-          {{ posts[0].Content }}
-        </div>
       </h1>
+      <div class="content">
+        <div v-html="$md.render(posts[0].Content)" />
+      </div>
     </main>
   </div>
 </template>
 
 <script>
 import getSinglePost from '~/apollo/queries/post/showSinglePost'
+
 export default {
   data () {
     return {
