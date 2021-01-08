@@ -1,10 +1,11 @@
-query Posts {  
-  posts {
+query getSinglePost($slug: String!) {
+  posts(where: {slug: $slug}) {
     id
     title
     excerpt
     publishedAt
     Content
+    slug
     mediaCover {
       url
     }

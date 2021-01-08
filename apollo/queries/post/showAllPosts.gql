@@ -1,0 +1,13 @@
+query getAllPosts {  
+  posts {
+    id
+    title
+    excerpt
+    publishedAt
+    Content
+    slug
+    mediaCover {
+      url
+    }
+  }
+}
