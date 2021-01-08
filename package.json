@@ -12,8 +12,9 @@
   },
   "dependencies": {
     "@nuxtjs/apollo": "^4.0.1-rc.5",
+    "@nuxtjs/markdownit": "^1.2.10",
     "@nuxtjs/style-resources": "^1.0.0",
-    "@tryghost/content-api": "^1.4.11",
+    "@tryghost/content-api": "^1.4.12",
     "core-js": "^3.6.5",
     "node-sass": "^5.0.0",
     "nuxt": "^2.14.6",
