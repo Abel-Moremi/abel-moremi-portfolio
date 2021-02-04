@@ -9,21 +9,29 @@
           <ul>
             <li>
               <nuxt-link to="/who">
-                who?
+                PROJECTS
               </nuxt-link>
             </li>
             <li>
               <nuxt-link to="/who">
-                Posts
+                BLOG
               </nuxt-link>
             </li>
             <li>
               <nuxt-link to="/who">
-                Contact
+                ABOUT
+              </nuxt-link>
+            </li>
+            <li>
+              <nuxt-link to="/who">
+                CONTACT
               </nuxt-link>
             </li>
           </ul>
         </nav>
+        <nuxt-link to="/" class="logo">
+          sun
+        </nuxt-link>
       </div>
     </div>
   </header>
