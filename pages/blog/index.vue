@@ -38,7 +38,7 @@
 </template>
 
 <script>
-import getAllPosts from '~/apollo/queries/post/showAllposts'
+import getAllPosts from '~/apollo/queries/post/showAllPosts'
 export default {
   data () {
     return {
