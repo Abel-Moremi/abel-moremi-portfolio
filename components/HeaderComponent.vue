@@ -30,12 +30,30 @@
           </ul>
         </nav>
         <nuxt-link to="/" class="logo">
-          sun
+          <IconifyIcon :icon="icons.sunIcon" :height="24" />
         </nuxt-link>
       </div>
     </div>
   </header>
 </template>
+
+<script>
+import IconifyIcon from '@iconify/vue'
+import sunIcon from '@iconify/icons-bi/sun'
+
+export default {
+  components: {
+    IconifyIcon
+  },
+  data () {
+    return {
+      icons: {
+        sunIcon
+      }
+    }
+  }
+}
+</script>
 
 <style lang="scss">
     header {
