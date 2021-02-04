@@ -58,7 +58,7 @@ export default {
 <style lang="scss">
     header {
         font-family: 'Roboto', sans-serif;
-        background: $primary-color;
+        background: $background-color;
         padding: 1em 0;
         text-align: center;
 
@@ -69,7 +69,7 @@ export default {
         }
 
         a {
-            color: white;
+            color: $text-color;
             text-decoration: none;
         }
 
