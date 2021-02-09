@@ -29,7 +29,7 @@
         </ul>
       </nav>
       <nuxt-link to="/" class="logo">
-        <IconifyIcon :icon="icons.sunIcon" :height="24" />
+        <IconifyIcon :icon="icons.sunIcon" :height="35" />
       </nuxt-link>
     </div>
   </header>
@@ -57,7 +57,7 @@ export default {
   header {
     font-family: 'Roboto', sans-serif;
     background: $background-color;
-    padding: 1em 10%;
+    padding: 0.5em 10%;
     text-align: center;
 
     .navbar{
@@ -68,6 +68,10 @@ export default {
     .logo{
       font-size: 1.2em;
       font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-direction: column;
     }
 
     a {
@@ -77,6 +81,9 @@ export default {
 
     nav {
       display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-direction: column;
     }
 
     ul {
