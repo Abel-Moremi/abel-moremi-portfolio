@@ -92,7 +92,7 @@ export default {
       display: flex;
 
       li a {
-        padding: .5em;
+        padding: 3em;
         font-size: 1em;
         font-weight: bold;
       }
