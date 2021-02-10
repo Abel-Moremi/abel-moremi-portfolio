@@ -1,5 +1,5 @@
 <template>
-  <div />
+  <HeroComponet />
 </template>
 
 <script>
