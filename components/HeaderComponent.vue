@@ -59,6 +59,8 @@ export default {
     background: $background-color;
     padding: 0.5em 10%;
     text-align: center;
+    width: 100%;
+    position: fixed;
 
     .navbar{
       display: flex;

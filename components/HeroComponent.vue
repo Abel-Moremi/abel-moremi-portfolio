@@ -24,17 +24,25 @@
       </nav>
     </div>
     <div class="hero-image">
-      <WaterIdea />
+      <WaterIdea :style="styleSVG" />
     </div>
   </div>
 </template>
 
 <script>
-import WaterIdea from '~/assets/images/water-idea.svg?inline'
+import WaterIdea from '~/assets/images/water-idea-light.svg?inline'
 
 export default {
   components: {
     WaterIdea
+  },
+  data () {
+    return {
+      styleSVG: {
+        width: '40vh',
+        height: '40vh'
+      }
+    }
   }
 }
 </script>
@@ -46,8 +54,11 @@ export default {
 }
 */
 
-.hero{
-    background: $background-color;
+.hero {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 </style>
