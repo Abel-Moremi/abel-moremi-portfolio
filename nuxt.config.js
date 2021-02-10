@@ -36,7 +36,8 @@ export default {
   modules: [
     '@nuxtjs/apollo',
     '@nuxtjs/style-resources',
-    '@nuxtjs/markdownit'
+    '@nuxtjs/markdownit',
+    '@nuxtjs/svg'
   ],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
