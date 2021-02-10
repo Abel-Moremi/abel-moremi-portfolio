@@ -23,12 +23,20 @@
         </ul>
       </nav>
     </div>
-    <div class="hero-image" />
+    <div class="hero-image">
+      <WaterIdea />
+    </div>
   </div>
 </template>
 
 <script>
-export default {}
+import WaterIdea from '~/assets/images/water-idea.svg?inline'
+
+export default {
+  components: {
+    WaterIdea
+  }
+}
 </script>
 
 <style  lang="scss">
