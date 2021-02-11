@@ -53,7 +53,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   header {
     font-family: 'Roboto', sans-serif;
     background: $background-color;
