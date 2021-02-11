@@ -39,7 +39,7 @@
       </nav>
     </div>
     <div class="hero-image">
-      <WaterIdea :style="styleSVG" />
+      <WaterIdea />
     </div>
   </div>
 </template>
@@ -63,10 +63,6 @@ export default {
   },
   data () {
     return {
-      styleSVG: {
-        width: '70vh',
-        height: '70vh'
-      },
       icons: {
         arrowDownload16Filled
       },
@@ -147,8 +143,52 @@ export default {
     }
 
     .hero-image {
-        padding-left: 2.5em;
+      padding-left: 2.5em;
     }
 }
 
+@media only screen and (max-width: 1400px) {
+  .hero-image {
+    svg {
+      width: 40vh;
+      height: 40vh;
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .hero-text {
+    padding:1em
+  }
+
+  .hero-image {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .hero {
+    .hero-text{
+      font-weight: bold;
+      .name-span {
+        font-size: 0.7em;
+      }
+      .title {
+        font-size: 1.25em;
+      }
+
+      .button {
+        .button-outer{
+          .button-inner {
+             p {
+              font-size: 0.7em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 </style>

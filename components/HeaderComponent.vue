@@ -6,22 +6,22 @@
       </nuxt-link>
       <nav>
         <ul>
-          <li>
+          <li hidden>
             <nuxt-link to="/who">
               PROJECTS
             </nuxt-link>
           </li>
-          <li>
+          <li hidden>
             <nuxt-link to="/who">
               BLOG
             </nuxt-link>
           </li>
-          <li>
+          <li hidden>
             <nuxt-link to="/who">
               ABOUT
             </nuxt-link>
           </li>
-          <li>
+          <li hidden>
             <nuxt-link to="/who">
               CONTACT
             </nuxt-link>
