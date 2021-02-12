@@ -39,7 +39,8 @@
       </nav>
     </div>
     <div class="hero-image">
-      <WaterIdea />
+      <WaterIdeaLight v-if="$colorMode.preference === 'light'" />
+      <WaterIdeaDark v-if="$colorMode.preference === 'dark'" />
     </div>
   </div>
 </template>
@@ -54,12 +55,15 @@ import codepenCircleFilled from '@iconify/icons-ant-design/codepen-circle-filled
 import stackoverflowIcon from '@iconify/icons-cib/stackoverflow'
 import alphaZBox from '@iconify/icons-mdi/alpha-z-box'
 import emailAlt from '@iconify/icons-dashicons/email-alt'
-import WaterIdea from '~/assets/images/water-idea-light.svg?inline'
+import WaterIdeaLight from '~/assets/images/water-idea-light.svg?inline'
+import WaterIdeaDark from '~/assets/images/water-idea-dark.svg?inline'
 
 export default {
   components: {
-    WaterIdea,
+    WaterIdeaLight,
+    WaterIdeaDark,
     IconifyIcon
+
   },
   data () {
     return {
@@ -80,13 +84,7 @@ export default {
 }
 </script>
 
-<style  lang="scss" scoped>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-@apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-
+<style  lang="scss">
 .hero {
     font-family: 'Roboto', sans-serif;
     display: flex;
@@ -95,7 +93,7 @@ export default {
     align-items: center;
 
     .hero-text {
-        color: $text-color;
+        color: var(--text-color);
         padding-right: 5em;
         font-weight: bold;
 
@@ -114,14 +112,14 @@ export default {
             .button-outer {
                 border-style: solid;
                 border-width: 0.3em;
-                border-color: $text-color;
+                border-color: var(--text-color);
 
                 .button-inner {
                     display: flex;
                     flex-flow: row wrap;
                     justify-content: space-evenly;
                     align-items: center;
-                    background-color: $accent-color;
+                    background-color: var(--accent-color);
                     margin: 0.2em;
                     padding: 0.1em;
 
@@ -145,6 +143,27 @@ export default {
     .hero-image {
       padding-left: 2.5em;
     }
+}
+
+.light-mode {
+  --background: #{ $light-background };
+  --text-color: #{ $light-text-color };
+  --accent-color: #{ $light-accent-color };
+}
+
+.dark-mode {
+  --background: #{ $dark-background };
+  --text-color: #{ $dark-text-color };
+  --accent-color: #{ $light-accent-color };
+}
+
+@media only screen and (min-width: 1401px) {
+  .hero-image {
+    svg {
+      width: 70vh;
+      height: 70vh;
+    }
+  }
 }
 
 @media only screen and (max-width: 1400px) {

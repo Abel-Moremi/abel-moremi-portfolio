@@ -28,9 +28,16 @@
           </li>
         </ul>
       </nav>
-      <nuxt-link to="/" class="logo">
-        <IconifyIcon :icon="icons.sunIcon" :height="35" />
-      </nuxt-link>
+      <div>
+        <nuxt-link to="" class="logo">
+          <div v-if="$colorMode.preference === 'light'" @click="$colorMode.preference = 'dark'">
+            <IconifyIcon :icon="icons.sunIcon" :height="35" />
+          </div>
+          <div v-if="$colorMode.preference === 'dark'" @click="$colorMode.preference = 'light'">
+            <IconifyIcon :icon="icons.moonIcon" :height="35" />
+          </div>
+        </nuxt-link>
+      </div>
     </div>
   </header>
 </template>
@@ -38,6 +45,7 @@
 <script>
 import IconifyIcon from '@iconify/vue'
 import sunIcon from '@iconify/icons-bi/sun'
+import moonIcon from '@iconify/icons-bi/moon'
 
 export default {
   components: {
@@ -46,17 +54,18 @@ export default {
   data () {
     return {
       icons: {
-        sunIcon
+        sunIcon,
+        moonIcon
       }
     }
   }
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   header {
     font-family: 'Roboto', sans-serif;
-    background: $background-color;
+    background: var(--background);
     padding: 0.5em 10%;
     text-align: center;
     width: 100%;
@@ -77,7 +86,7 @@ export default {
     }
 
     a {
-      color: $text-color;
+      color: var(--text-color);
       text-decoration: none;
     }
 
@@ -99,5 +108,15 @@ export default {
         font-weight: bold;
       }
     }
+  }
+
+  .light-mode {
+    --background: #{ $light-background };
+    --text-color: #{ $light-text-color };
+  }
+
+  .dark-mode {
+    --background: #{ $dark-background };
+    --text-color: #{ $dark-text-color };
   }
 </style>
