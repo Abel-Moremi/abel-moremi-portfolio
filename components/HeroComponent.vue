@@ -119,7 +119,8 @@ export default {
                     flex-flow: row wrap;
                     justify-content: space-evenly;
                     align-items: center;
-                    background-color: var(--accent-color);
+                    background-color: $accent-color-2;
+                    color: $accent-color-1;
                     margin: 0.2em;
                     padding: 0.1em;
 
@@ -148,13 +149,11 @@ export default {
 .light-mode {
   --background: #{ $light-background };
   --text-color: #{ $light-text-color };
-  --accent-color: #{ $light-accent-color };
 }
 
 .dark-mode {
   --background: #{ $dark-background };
   --text-color: #{ $dark-text-color };
-  --accent-color: #{ $light-accent-color };
 }
 
 @media only screen and (min-width: 1401px) {
