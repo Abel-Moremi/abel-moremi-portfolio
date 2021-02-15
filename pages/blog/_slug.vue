@@ -55,7 +55,7 @@ export default {
     padding: .5em 3em;
     margin: 2em 0 3em;
     display: inline-block;
-    color: $accent-color;
+    color: $accent-color-1;
     text-decoration: none;
   }
 }
