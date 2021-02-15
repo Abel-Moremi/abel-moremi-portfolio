@@ -19,12 +19,14 @@
             </p>
           </li>
           <li class="button">
-            <div class="button-outer">
-              <div class="button-inner">
-                <IconifyIcon :icon="icons.arrowDownload16Filled" :height="16" />
-                <p>RESUME</p>
+            <a :href="resume.resumePDF.url" target="_blank">
+              <div class="button-outer">
+                <div class="button-inner">
+                  <IconifyIcon :icon="icons.arrowDownload16Filled" :height="16" />
+                  <p>RESUME</p>
+                </div>
               </div>
-            </div>
+            </a>
           </li>
           <li>
             <div class="links">
@@ -57,6 +59,7 @@ import alphaZBox from '@iconify/icons-mdi/alpha-z-box'
 import emailAlt from '@iconify/icons-dashicons/email-alt'
 import WaterIdeaLight from '~/assets/images/water-idea-light.svg?inline'
 import WaterIdeaDark from '~/assets/images/water-idea-dark.svg?inline'
+import getResume from '~/apollo/queries/resume/getResume'
 
 export default {
   components: {
@@ -78,7 +81,15 @@ export default {
         { icon: stackoverflowIcon, size: '28', title: 'StackOverflow', href: 'https://stackoverflow.com/users/9463524/abel-moremi' },
         { icon: alphaZBox, size: '32', title: 'Zindi', href: 'https://zindi.africa/users/Abel' },
         { icon: emailAlt, size: '32', title: 'Email', href: 'mailto: abelmoremiz@gmail.com' }
-      ]
+      ],
+      resume: [],
+      query: ''
+    }
+  },
+  apollo: {
+    resume: {
+      prefetch: true,
+      query: getResume
     }
   }
 }
@@ -113,6 +124,16 @@ export default {
                 border-style: solid;
                 border-width: 0.3em;
                 border-color: var(--text-color);
+                box-shadow: 0.08em 0.08em 0.08em 0.08em var(--box-shadow);
+
+                &:hover {
+                  background-color: green;
+                  cursor: pointer;
+                }
+
+                &:active {
+                  background-color: $accent-color-2;
+                }
 
                 .button-inner {
                     display: flex;
@@ -149,11 +170,13 @@ export default {
 .light-mode {
   --background: #{ $light-background };
   --text-color: #{ $light-text-color };
+  --box-shadow: #{ light-box-shadow };
 }
 
 .dark-mode {
   --background: #{ $dark-background };
   --text-color: #{ $dark-text-color };
+  --box-shadow: #{ $dark-box-shadow };
 }
 
 @media only screen and (min-width: 1401px) {
