@@ -1,9 +1,15 @@
 name: Deploy
 on:
-  pull_request:
-    types: closed
+  #pull_request:
+  #  types: closed
+  #  branches:
+  #    - main
+  push:
     branches:
-      - main
+      - '*'         # matches every branch that doesn't contain a '/'
+      - '*/*'       # matches every branch containing a single '/'
+      - '**'        # matches every branch
+      - '!main'     # excludes master
 jobs:
   setup:
     name: Setup
@@ -38,7 +44,8 @@ jobs:
         gcloud run deploy ${{ secrets.GCP_APPLICATION }} --image gcr.io/${{ secrets.GCP_PROJECT }}/${{ secrets.GCP_APPLICATION }} \
         --platform managed \
         --allow-unauthenticated \
-        --memory 512M
+        --memory 512M \
+        --port 3000
 
     # Show url output
     - name: Show URL-Output
