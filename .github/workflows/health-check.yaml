@@ -26,11 +26,6 @@ jobs:
       run: |
         gcloud auth configure-docker
 
-
-  build:
-    runs-on: ubuntu-latest
-    needs: [setup]
-    steps:
     # Build the Docker image
     - name: Build
       run: |
