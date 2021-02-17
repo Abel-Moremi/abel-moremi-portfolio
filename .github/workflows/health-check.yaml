@@ -1,4 +1,4 @@
-name: health-check
+name: Health-Check
 on:
   push:
     branches:
