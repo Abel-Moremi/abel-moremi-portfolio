@@ -8,8 +8,11 @@ on:
       - '!main'     # excludes master
 jobs:
   setup:
-    name: Setup, Build, Publish, and Deploy
+    name: Setup
     runs-on: ubuntu-latest
+    services:
+      ports:
+        - 3000:3000
     steps:
     - name: Checkout
       uses: actions/checkout@master
