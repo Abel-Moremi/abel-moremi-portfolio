@@ -8,7 +8,7 @@ on:
       - '!main'     # excludes master
 jobs:
   setup:
-    name: Setup, Build, Publish, and Deploy
+    name: Setup
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
@@ -36,4 +36,4 @@ jobs:
       run: |
         gcloud config set project ${{ secrets.GCP_PROJECT }}
         gcloud builds submit --tag gcr.io/${{ secrets.GCP_PROJECT }}/${{ secrets.GCP_APPLICATION }}
-        gcloud config set run/region us-central1
+        gcloud config set run/region us-central1 port 3000
