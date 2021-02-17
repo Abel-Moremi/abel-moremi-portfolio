@@ -1,4 +1,0 @@
-steps:
- # build the container 
- - name: 'gcr.io/cloud-builders/docker'
-   args: ['build', '--network=cloudbuild','-t', 'gcr.io/abel-moremi-portfolio/portfolio-server', '.']
