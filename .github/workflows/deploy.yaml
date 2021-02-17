@@ -6,7 +6,7 @@ on:
       - main
 jobs:
   setup:
-    name: Setup
+    name: Deploy
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
@@ -38,7 +38,8 @@ jobs:
         gcloud run deploy ${{ secrets.GCP_APPLICATION }} --image gcr.io/${{ secrets.GCP_PROJECT }}/${{ secrets.GCP_APPLICATION }} \
         --platform managed \
         --allow-unauthenticated \
-        --memory 512M
+        --memory 512M \
+        --port 3000
 
     # Show url output
     - name: Show URL-Output
