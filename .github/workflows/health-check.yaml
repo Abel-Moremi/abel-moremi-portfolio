@@ -1,0 +1,39 @@
+name: health-check
+on:
+  push:
+    branches:
+      - '*'         # matches every branch that doesn't contain a '/'
+      - '*/*'       # matches every branch containing a single '/'
+      - '**'        # matches every branch
+      - '!main'     # excludes master
+jobs:
+  setup:
+    name: Setup, Build, Publish, and Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+
+    # Setup gcloud CLI
+    - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+      with:
+        service_account_email: ${{ secrets.GCP_EMAIL }}
+        service_account_key: ${{ secrets.GCP_CREDENTIALS }}
+        export_default_credentials: true
+    
+    # Configure Docker with Credentials
+    - name: Configure Docker
+      run: |
+        gcloud auth configure-docker
+
+
+  build:
+    runs-on: ubuntu-latest
+    needs: [setup]
+    steps:
+    # Build the Docker image
+    - name: Build
+      run: |
+        gcloud config set project ${{ secrets.GCP_PROJECT }}
+        gcloud builds submit --tag gcr.io/${{ secrets.GCP_PROJECT }}/${{ secrets.GCP_APPLICATION }}
+        gcloud config set run/region us-central1
