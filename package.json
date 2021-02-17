@@ -1,41 +1,42 @@
 {
-  "name": "abel-moremi-portfolio",
-  "version": "0.1.0",
+  "name": "portfolio",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint": "npm run lint:js"
   },
   "dependencies": {
-    "core-js": "^3.6.4",
-    "vue": "^2.6.11"
+    "@nuxtjs/apollo": "^4.0.1-rc.5",
+    "@nuxtjs/markdownit": "^1.2.10",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "@nuxtjs/svg": "^0.1.12",
+    "@tryghost/content-api": "^1.4.12",
+    "core-js": "^3.6.5",
+    "node-sass": "^5.0.0",
+    "nuxt": "^2.14.6",
+    "sass-loader": "^10.1.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.2.0",
-    "@vue/cli-plugin-eslint": "~4.2.0",
-    "@vue/cli-service": "~4.2.0",
-    "babel-eslint": "^10.0.3",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.1.2",
-    "vue-template-compiler": "^2.6.11"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "rules": {}
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ]
+    "@iconify/icons-akar-icons": "^1.1.1",
+    "@iconify/icons-ant-design": "^1.1.0",
+    "@iconify/icons-bi": "^1.1.1",
+    "@iconify/icons-brandico": "^1.1.0",
+    "@iconify/icons-cib": "^1.1.0",
+    "@iconify/icons-dashicons": "^1.1.0",
+    "@iconify/icons-fluent": "^1.1.4",
+    "@iconify/icons-mdi": "^1.1.11",
+    "@iconify/vue": "^1.0.6",
+    "@nuxtjs/color-mode": "^2.0.3",
+    "@nuxtjs/eslint-config": "^3.1.0",
+    "@nuxtjs/eslint-module": "^2.0.0",
+    "@nuxtjs/tailwindcss": "^3.1.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.10.0",
+    "eslint-plugin-nuxt": "^1.0.0"
+  }
 }
