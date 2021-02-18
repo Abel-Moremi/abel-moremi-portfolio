@@ -31,12 +31,13 @@
       <div>
         <nuxt-link to="" class="logo">
           <ColorScheme placeholder="..." tag="span">
-            <div v-if="$colorMode.preference === 'light'" @click="$colorMode.preference = 'dark'">
+            <div v-if="$colorMode.value === 'light'" @click="$colorMode.preference = 'dark'">
               <IconifyIcon :icon="icons.sunIcon" :height="35" />
             </div>
-            <div v-if="$colorMode.preference === 'dark'" @click="$colorMode.preference = 'light'">
+            <div v-else-if="$colorMode.value === 'dark'" @click="$colorMode.preference = 'light'">
               <IconifyIcon :icon="icons.moonIcon" :height="35" />
             </div>
+            <div v-else />
           </ColorScheme>
         </nuxt-link>
       </div>
