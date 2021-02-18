@@ -15,28 +15,28 @@
     "@nuxtjs/markdownit": "^1.2.10",
     "@nuxtjs/style-resources": "^1.0.0",
     "@nuxtjs/svg": "^0.1.12",
-    "@tryghost/content-api": "^1.4.12",
-    "core-js": "^3.6.5",
+    "core-js": "^3.8.3",
+    "graphql-tools": "^7.0.4",
     "node-sass": "^5.0.0",
-    "nuxt": "^2.14.6",
-    "sass-loader": "^10.1.0"
+    "nuxt": "^2.15.0",
+    "sass-loader": "^10.1.1"
   },
   "devDependencies": {
     "@iconify/icons-akar-icons": "^1.1.1",
     "@iconify/icons-ant-design": "^1.1.0",
-    "@iconify/icons-bi": "^1.1.1",
+    "@iconify/icons-bi": "^1.1.2",
     "@iconify/icons-brandico": "^1.1.0",
     "@iconify/icons-cib": "^1.1.0",
     "@iconify/icons-dashicons": "^1.1.0",
-    "@iconify/icons-fluent": "^1.1.4",
+    "@iconify/icons-fluent": "^1.1.5",
     "@iconify/icons-mdi": "^1.1.11",
     "@iconify/vue": "^1.0.6",
     "@nuxtjs/color-mode": "^2.0.3",
     "@nuxtjs/eslint-config": "^3.1.0",
     "@nuxtjs/eslint-module": "^2.0.0",
-    "@nuxtjs/tailwindcss": "^3.1.0",
+    "@nuxtjs/tailwindcss": "^3.4.2",
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.10.0",
+    "eslint": "^7.20.0",
     "eslint-plugin-nuxt": "^1.0.0"
   }
 }
