@@ -16,6 +16,7 @@
     "@nuxtjs/style-resources": "^1.0.0",
     "@nuxtjs/svg": "^0.1.12",
     "core-js": "^3.8.3",
+    "graphql-tools": "^7.0.4",
     "node-sass": "^5.0.0",
     "nuxt": "^2.15.0",
     "sass-loader": "^10.1.1"
