@@ -30,12 +30,14 @@
       </nav>
       <div>
         <nuxt-link to="" class="logo">
-          <div v-if="$colorMode.preference === 'light'" @click="$colorMode.preference = 'dark'">
-            <IconifyIcon :icon="icons.sunIcon" :height="35" />
-          </div>
-          <div v-if="$colorMode.preference === 'dark'" @click="$colorMode.preference = 'light'">
-            <IconifyIcon :icon="icons.moonIcon" :height="35" />
-          </div>
+          <ColorScheme placeholder="..." tag="span">
+            <div v-if="$colorMode.preference === 'light'" @click="$colorMode.preference = 'dark'">
+              <IconifyIcon :icon="icons.sunIcon" :height="35" />
+            </div>
+            <div v-if="$colorMode.preference === 'dark'" @click="$colorMode.preference = 'light'">
+              <IconifyIcon :icon="icons.moonIcon" :height="35" />
+            </div>
+          </ColorScheme>
         </nuxt-link>
       </div>
     </div>

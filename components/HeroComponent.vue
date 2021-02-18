@@ -41,8 +41,10 @@
       </nav>
     </div>
     <div class="hero-image">
-      <WaterIdeaLight v-if="$colorMode.preference === 'light'" />
-      <WaterIdeaDark v-if="$colorMode.preference === 'dark'" />
+      <ColorScheme placeholder="..." tag="span">
+        <WaterIdeaLight v-if="$colorMode.preference === 'light'" />
+        <WaterIdeaDark v-if="$colorMode.preference === 'dark'" />
+      </ColorScheme>
     </div>
   </div>
 </template>
