@@ -34,11 +34,8 @@
             <div v-if="$colorMode.preference === 'light'" @click="$colorMode.preference = 'dark'">
               <IconifyIcon :icon="icons.sunIcon" :height="35" />
             </div>
-            <div v-else-if="$colorMode.preference === 'dark'" @click="$colorMode.preference = 'light'">
+            <div v-if="$colorMode.preference === 'dark'" @click="$colorMode.preference = 'light'">
               <IconifyIcon :icon="icons.moonIcon" :height="35" />
-            </div>
-            <div v-else @click="$colorMode.preference = 'dark'">
-              <IconifyIcon :icon="icons.sunIcon" :height="35" />
             </div>
           </ColorScheme>
         </nuxt-link>
