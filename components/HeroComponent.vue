@@ -43,7 +43,7 @@
     <div class="hero-image">
       <ColorScheme placeholder="..." tag="span">
         <WaterIdeaLight v-if="$colorMode.value === 'light'" />
-        <WaterIdeaDark v-else-if="$colorMode.valuue === 'dark'" />
+        <WaterIdeaDark v-else-if="$colorMode.value === 'dark'" />
         <div v-else />
       </ColorScheme>
     </div>
