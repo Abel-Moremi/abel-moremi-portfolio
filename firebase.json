@@ -1,16 +1,17 @@
 {
   "hosting": {
-    "public": "",
+    "public": "static",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
     ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
+    "rewrites": [ {
+      "source": "**",
+      "run": {
+        "serviceId": "abel-moremi-portfolio",  
+        "region": "us-central1"    
       }
-    ]
+    } ]
   }
 }
