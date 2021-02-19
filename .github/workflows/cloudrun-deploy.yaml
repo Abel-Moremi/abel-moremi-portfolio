@@ -1,12 +1,12 @@
-name: Deploy
+name: CloudRun-Deploy
 on:
   pull_request:
     types: closed
     branches:
       - main
 jobs:
-  setup:
-    name: Deploy
+  cloudrun-deploy:
+    name: CloudRun-Deploy
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
