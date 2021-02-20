@@ -21,8 +21,6 @@ export default {
   plugins: [
   ],
 
-  serverMiddleware: ['~/server-middleware/headers.js'],
-
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
 
