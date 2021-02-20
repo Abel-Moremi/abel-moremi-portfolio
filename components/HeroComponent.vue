@@ -179,7 +179,7 @@ export default {
 .light-mode {
   --background: #{ $light-background };
   --text-color: #{ $light-text-color };
-  --box-shadow: #{ light-box-shadow };
+  --box-shadow: #{ $light-box-shadow };
 }
 
 .dark-mode {
