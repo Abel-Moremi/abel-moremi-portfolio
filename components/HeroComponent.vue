@@ -108,7 +108,6 @@ export default {
 
     .hero-text {
         color: var(--text-color);
-        padding-right: 5em;
         font-weight: bold;
 
         .name-span {
@@ -157,11 +156,18 @@ export default {
         }
 
         .links{
-            padding-top: 1em;
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-evenly;
-            align-items: center;
+          padding-top: 1em;
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: space-between;
+          align-items: center;
+
+          a {
+            &:hover {
+              color: $accent-color-2;
+            }
+
+          }
         }
     }
 
@@ -173,7 +179,7 @@ export default {
 .light-mode {
   --background: #{ $light-background };
   --text-color: #{ $light-text-color };
-  --box-shadow: #{ light-box-shadow };
+  --box-shadow: #{ $light-box-shadow };
 }
 
 .dark-mode {

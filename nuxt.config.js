@@ -54,7 +54,7 @@ export default {
           fix: true
         }
       })
-  }
+    }
   },
 
   server: {
