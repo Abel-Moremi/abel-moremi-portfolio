@@ -108,7 +108,6 @@ export default {
 
     .hero-text {
         color: var(--text-color);
-        padding-right: 5em;
         font-weight: bold;
 
         .name-span {
@@ -160,7 +159,7 @@ export default {
           padding-top: 1em;
           display: flex;
           flex-flow: row wrap;
-          justify-content: space-evenly;
+          justify-content: space-between;
           align-items: center;
 
           a {
