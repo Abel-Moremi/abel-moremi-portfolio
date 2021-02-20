@@ -91,6 +91,13 @@ export default {
     a {
       color: var(--text-color);
       text-decoration: none;
+
+      &:hover {
+        color: $accent-color-2;
+      }
+      &:active {
+        color: var(--text-color);
+      }
     }
 
     nav {
