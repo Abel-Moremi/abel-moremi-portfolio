@@ -157,11 +157,18 @@ export default {
         }
 
         .links{
-            padding-top: 1em;
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-evenly;
-            align-items: center;
+          padding-top: 1em;
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: space-evenly;
+          align-items: center;
+
+          a {
+            &:hover {
+              color: $accent-color-2;
+            }
+
+          }
         }
     }
 
