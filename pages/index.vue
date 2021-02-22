@@ -36,10 +36,11 @@ section {
   margin: 0;
   background: var(--background);
 
-  .hero{
+  .hero {
     height: 100vh;
   }
-  .tech{
+
+  .tech {
     height: 100vh;
   }
 }

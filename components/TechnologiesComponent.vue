@@ -1,5 +1,5 @@
 <template>
-  <div class="technologies">
+  <div class="tech">
     <div class="tech-title">
       <ul>
         <li>
@@ -8,18 +8,18 @@
           </p>
         </li>
         <li>
-          <p class="name-spna">
-            DATA SCIENCE ENTHUSIAST
+          <p class="name-span">
+            I HAVE WORKED WITH
           </p>
         </li>
       </ul>
     </div>
     <div class="tech-icons">
-      <div v-for="icon in icons" :key="icon.icon">
-        <a :title="icon.title">
+      <a v-for="icon in icons" :key="icon.icon" class="icon">
+        <div :title="icon.title">
           <IconifyIcon :icon="icon.icon" :height="icon.size" />
-        </a>
-      </div>
+        </div>
+      </a>
     </div>
   </div>
 </template>
@@ -55,27 +55,27 @@ export default {
   data () {
     return {
       icons: [
-        { icon: javaIcon, size: '32', title: 'Java' },
-        { icon: logoPython, size: '32', title: 'Python' },
-        { icon: bxlJavascript, size: '32', title: 'JavaScript' },
-        { icon: html5Icon, size: '32', title: 'HTML' },
-        { icon: bxsFileCss, size: '32', title: 'CSS' },
-        { icon: bootstrapFill, size: '32', title: 'BootStrap' },
-        { icon: vueJs, size: '32', title: 'VueJS' },
-        { icon: nuxtJs, size: '32', title: 'NuxtJS' },
-        { icon: bxlNodejs, size: '32', title: 'NodeJS' },
-        { icon: djangoIcon, size: '32', title: 'Django' },
-        { icon: googleCloud, size: '32', title: 'Google Cloud' },
-        { icon: bxlFirebase, size: '32', title: 'Firebase' },
-        { icon: herokuIcon, size: '32', title: 'Heroku' },
-        { icon: dockerIcon, size: '32', title: 'Docker' },
-        { icon: gitIcon, size: '32', title: 'Git' },
-        { icon: pandasIcon, size: '32', title: 'Pandas' },
-        { icon: tensorflowIcon, size: '32', title: 'TensorFlow' },
-        { icon: pytorchIcon, size: '32', title: 'PyTorch' },
-        { icon: scikitLearn, size: '32', title: 'Scikit-Learn' },
-        { icon: sqlIcon, size: '32', title: 'SQL' },
-        { icon: postgresqlIcon, size: '32', title: 'SQL' }
+        { icon: javaIcon, size: '50', title: 'Java' },
+        { icon: logoPython, size: '50', title: 'Python' },
+        { icon: bxlJavascript, size: '50', title: 'JavaScript' },
+        { icon: html5Icon, size: '50', title: 'HTML' },
+        { icon: bxsFileCss, size: '50', title: 'CSS' },
+        { icon: bootstrapFill, size: '50', title: 'BootStrap' },
+        { icon: vueJs, size: '50', title: 'VueJS' },
+        { icon: nuxtJs, size: '50', title: 'NuxtJS' },
+        { icon: bxlNodejs, size: '50', title: 'NodeJS' },
+        { icon: djangoIcon, size: '50', title: 'Django' },
+        { icon: googleCloud, size: '50', title: 'Google Cloud' },
+        { icon: bxlFirebase, size: '50', title: 'Firebase' },
+        { icon: herokuIcon, size: '50', title: 'Heroku' },
+        { icon: dockerIcon, size: '50', title: 'Docker' },
+        { icon: gitIcon, size: '50', title: 'Git' },
+        { icon: pandasIcon, size: '50', title: 'Pandas' },
+        { icon: tensorflowIcon, size: '50', title: 'TensorFlow' },
+        { icon: pytorchIcon, size: '50', title: 'PyTorch' },
+        { icon: scikitLearn, size: '50', title: 'Scikit-Learn' },
+        { icon: sqlIcon, size: '50', title: 'SQL' },
+        { icon: postgresqlIcon, size: '50', title: 'SQL' }
       ]
     }
   }
@@ -83,4 +83,48 @@ export default {
 </script>
 
 <style  lang="scss">
+
+.tech{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    background: var(--tech-background);
+
+    .tech-title{
+        color: var(--text-color);
+        font-weight: bold;
+        padding: 3em;
+
+        .name-span {
+            letter-spacing: 1.5em;
+            font-size: 0.875em;
+        }
+
+        .title {
+            font-size: 2.25em;
+        }
+    }
+
+    .tech-icons {
+        color: var(--text-color);
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 3em;
+        padding: 3em;
+    }
+}
+
+.light-mode {
+  --tech-background: #{ $light-tech-background };
+  --text-color: #{ $light-text-color };
+  --box-shadow: #{ $light-box-shadow };
+}
+
+.dark-mode {
+  --tech-background: #{ $dark-tech-background };
+  --text-color: #{ $dark-text-color };
+  --box-shadow: #{ $dark-box-shadow };
+}
 </style>
