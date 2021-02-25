@@ -16,8 +16,11 @@
     </div>
     <div class="tech-icons">
       <a v-for="icon in icons" :key="icon.icon" class="icon">
-        <div :title="icon.title">
-          <IconifyIcon :icon="icon.icon" :height="icon.size" />
+        <div class="tooltip">
+          <div>
+            <IconifyIcon :icon="icon.icon" :height="icon.size" />
+          </div>
+          <span class="tooltiptext">{{ icon.title }}</span>
         </div>
       </a>
     </div>
@@ -113,6 +116,36 @@ export default {
         grid-template-columns: auto auto auto auto;
         grid-gap: 3em;
         padding: 3em;
+
+        /* Tooltip container */
+      .tooltip {
+        position: relative;
+        display: inline-block;
+
+         /* Tooltip text */
+        & .tooltiptext {
+          visibility: hidden;
+          width: 7.5em;
+          background-color: black;
+          color: #fff;
+          text-align: center;
+          padding: 0.3125em 0;
+          border-radius: 0.375em;
+
+          /* Position the tooltip text - see examples below! */
+          position: absolute;
+          z-index: 1;
+          width: 7.5em;
+          top: 100%;
+          left: 50%;
+          margin-left: -3.75em; /* Use half of the width (120/2 = 60), to center the tooltip */
+        }
+      }
+
+      /* Show the tooltip text when you mouse over the tooltip container */
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+      }
     }
 }
 
