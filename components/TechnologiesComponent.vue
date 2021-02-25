@@ -117,32 +117,28 @@ export default {
         grid-gap: 3em;
         padding: 3em;
 
-        /* Tooltip container */
       .tooltip {
         position: relative;
         display: inline-block;
 
-         /* Tooltip text */
         & .tooltiptext {
           visibility: hidden;
           width: 7.5em;
-          background-color: black;
-          color: #fff;
+          grid-gap: 3em;
+          background-color: $primary-color;
+          color: $secondary-color;
           text-align: center;
-          padding: 0.3125em 0;
-          border-radius: 0.375em;
-
-          /* Position the tooltip text - see examples below! */
+          padding: 0.3em 0;
+          border-radius: 0.3em;
           position: absolute;
           z-index: 1;
           width: 7.5em;
           top: 100%;
           left: 50%;
-          margin-left: -3.75em; /* Use half of the width (120/2 = 60), to center the tooltip */
+          margin-left: -3.75em;
         }
       }
 
-      /* Show the tooltip text when you mouse over the tooltip container */
       .tooltip:hover .tooltiptext {
         visibility: visible;
       }
@@ -159,5 +155,28 @@ export default {
   --tech-background: #{ $dark-tech-background };
   --text-color: #{ $dark-text-color };
   --box-shadow: #{ $dark-box-shadow };
+}
+
+@media only screen and (max-width: 600px) {
+  .tech {
+    .tech-title{
+      .name-span{
+        font-size: 0.7em;
+        letter-spacing: 1.1em;
+      }
+      .title {
+        font-size: 1.25em;
+      }
+    }
+    .tech-icons{
+      grid-gap: 1.5em;
+      padding: 1em;
+
+      svg {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
 }
 </style>
