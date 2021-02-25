@@ -1,11 +1,17 @@
 <template>
-  <section class="hero">
-    <HeroComponent />
-  </section>
+  <div>
+    <section class="hero">
+      <HeroComponent />
+    </section>
+    <section class="tech">
+      <TechnologiesComponent />
+    </section>
+  </div>
 </template>
 
 <script>
-export default {}
+export default {
+}
 </script>
 
 <style lang="scss">
@@ -30,7 +36,11 @@ section {
   margin: 0;
   background: var(--background);
 
-  .hero{
+  .hero {
+    height: 100vh;
+  }
+
+  .tech {
     height: 100vh;
   }
 }
