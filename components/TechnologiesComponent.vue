@@ -108,7 +108,7 @@ export default {
     }
 
     .tech-icons {
-        color: var(--text-color);
+        color: $primary-color;
         display: grid;
         grid-template-columns: auto auto auto auto;
         grid-gap: 3em;
