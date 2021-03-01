@@ -1,0 +1,10 @@
+query getFeaturedProjects {  
+  projects(where: {featured: true}) {
+    cover{
+      url
+    }
+    name
+    description
+    techAndLinks 
+  }
+}
