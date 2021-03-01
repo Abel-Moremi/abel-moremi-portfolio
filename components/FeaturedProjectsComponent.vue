@@ -1,5 +1,28 @@
 <template>
-  <div class="featuredProjects" />
+  <div class="featuredProjects">
+    <div class="project-title">
+      <ul>
+        <li>
+          <p class="name-span">
+            FEATURED
+          </p>
+        </li>
+        <li>
+          <p class="title">
+            PROJETCS
+          </p>
+        </li>
+      </ul>
+    </div>
+    <div class="project">
+      <div class="project-image">
+        image
+      </div>
+      <div class="project-text">
+        text
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -16,6 +39,21 @@ export default {
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+
+     .project-title{
+        color: var(--text-color);
+        font-weight: bold;
+        padding: 3em;
+
+        .name-span {
+            letter-spacing: 1.5em;
+            font-size: 0.875em;
+        }
+
+        .title {
+            font-size: 2.25em;
+        }
+    }
 }
 
 .light-mode {
