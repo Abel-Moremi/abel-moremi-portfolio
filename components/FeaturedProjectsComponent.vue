@@ -14,20 +14,35 @@
         </li>
       </ul>
     </div>
-    <div class="project">
-      <div class="project-image">
-        image
-      </div>
-      <div class="project-text">
-        text
+    <div class="projects">
+      <div v-for="project in projects" :key="project.name" class="project">
+        <div class="project-image">
+          <img :src="project.cover.url" alt="Project Image">
+        </div>
+        <div class="project-text">
+          {{ project.name }}
+          {{ project.techAndLinks.tech }}
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-
+import getFeaturedProjects from '~/apollo/queries/project/getFeaturedProjects'
 export default {
+  data () {
+    return {
+      projects: [],
+      query: ''
+    }
+  },
+  apollo: {
+    projects: {
+      prefetch: true,
+      query: getFeaturedProjects
+    }
+  }
 }
 </script>
 
