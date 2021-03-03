@@ -14,7 +14,7 @@
         </li>
       </ul>
     </div>
-    <div class="projects">
+    <div hidden class="projects">
       <div v-for="project in projects" :key="project.name" class="project">
         <div class="project-image">
           <img :src="project.cover.url" alt="Project Image">
@@ -205,5 +205,78 @@ export default {
   --tech-background: #{ $dark-tech-background };
   --text-color: #{ $dark-text-color };
   --box-shadow: #{ $dark-box-shadow };
+}
+
+@media only screen and (max-width: 600px) {
+  .featuredProjects{
+    .project-title{
+      padding: 1em;
+
+      .name-span{
+        font-size: 0.7em;
+        letter-spacing: 1.1em;
+      }
+      .title {
+        font-size: 1.25em;
+      }
+    }
+    .projects{
+      width: 20em;
+      display: flex;
+      overflow-x: auto;
+      align-items: left;
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory;
+
+      .project{
+        width: 100%;
+        height: 100%;
+        flex-shrink: 0;
+        flex-flow: row wrap;
+        scroll-snap-align: start;
+        scroll-behavior: smooth;
+
+        .project-image {
+          padding: 0.5em;
+          img {
+            width: 100%;
+            height: 100%;
+            max-height: 12em;
+            max-width: 12em;
+          }
+        }
+        .project-text {
+          color: var(--text-color);
+          width: 20em;
+
+          .project-name {
+            padding: 0.1em;
+            font-size: 1.25em;
+          }
+
+          .project-description {
+            padding: 0.25em 0 0.25em 0;
+
+            .des-text {
+              p {
+                font-size: .8em;
+              }
+            }
+          }
+
+          .project-stack {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: left;
+            align-items: center;
+            p {
+              padding-right: 0.8em;
+              font-size: 0.6em;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 </style>
