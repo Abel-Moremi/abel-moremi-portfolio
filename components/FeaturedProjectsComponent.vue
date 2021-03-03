@@ -14,7 +14,7 @@
         </li>
       </ul>
     </div>
-    <div v-for="project in projects" :key="project.name" class="projects">
+    <div v-for="project in projects" :key="project.id" class="projects">
       <div class="project">
         <div class="project-image">
           <img :src="project.cover.url" alt="Project Image">
@@ -26,7 +26,11 @@
           <div class="project-links">
             <div v-for="link in project.techAndLinks.Links" :key="link" class="project-link">
               <a v-if="link.name === 'link'" :href="link.address" title="Web" target="_blank">
-                <IconifyIcon :icon="icons.earthEuropeAfricaFilled" size="32" /></a>
+                <IconifyIcon :icon="icons.earthEuropeAfricaFilled" size="32" />
+              </a>
+              <a v-if="link.name === 'zindi'" :href="link.address" title="Github" target="_blank">
+                <IconifyIcon :icon="icons.alphaZBox" size="32" />
+              </a>
               <a v-if="link.name === 'github'" :href="link.address" title="Github" target="_blank">
                 <IconifyIcon :icon="icons.githubIcon" size="32" />
               </a>
@@ -52,6 +56,7 @@
 import IconifyIcon from '@iconify/vue'
 import githubIcon from '@iconify/icons-brandico/github'
 import earthEuropeAfricaFilled from '@iconify/icons-carbon/earth-europe-africa-filled'
+import alphaZBox from '@iconify/icons-mdi/alpha-z-box'
 import getFeaturedProjects from '~/apollo/queries/project/getFeaturedProjects'
 export default {
   components: {
@@ -61,7 +66,8 @@ export default {
     return {
       icons: {
         earthEuropeAfricaFilled,
-        githubIcon
+        githubIcon,
+        alphaZBox
       },
       projects: [],
       query: ''
@@ -101,6 +107,11 @@ export default {
   }
 
   .projects {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 3em;
+    padding: 3em;
+
     .project {
       display: flex;
       flex-flow: row wrap;
@@ -108,6 +119,7 @@ export default {
       align-items: center;
 
       .project-image {
+        padding: 0.5em;
         img {
           height: 15em;
           width: 15em;
