@@ -6,6 +6,9 @@
     <section class="tech">
       <TechnologiesComponent />
     </section>
+    <section class="featuredProjects">
+      <FeaturedProjectsComponent />
+    </section>
   </div>
 </template>
 
@@ -41,6 +44,10 @@ section {
   }
 
   .tech {
+    height: 100vh;
+  }
+
+  .featuredProjects {
     height: 100vh;
   }
 }

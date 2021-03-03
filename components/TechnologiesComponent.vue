@@ -111,11 +111,11 @@ export default {
     }
 
     .tech-icons {
-        color: $primary-color;
-        display: grid;
-        grid-template-columns: auto auto auto auto;
-        grid-gap: 3em;
-        padding: 3em;
+      color: $primary-color;
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      grid-gap: 3em;
+      padding: 3em;
 
       .tooltip {
         position: relative;
@@ -131,7 +131,6 @@ export default {
           padding: 0.3em 0;
           border-radius: 0.3em;
           position: absolute;
-          z-index: 1;
           width: 7.5em;
           top: 100%;
           left: 50%;
