@@ -38,7 +38,9 @@
             </div>
           </div>
           <div class="project-stack">
-            {{ project.techAndLinks.tech }}
+            <div v-for="tech in project.techAndLinks.tech" :key="tech">
+              <p>{{ tech }}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -118,7 +120,7 @@ export default {
         .project-name {
           font-weight: bold;
           padding: 0.1em;
-          font-size: 1.25em;
+          font-size: 1.5em;
         }
         .project-links {
           display: flex;
@@ -151,6 +153,16 @@ export default {
               font-size: 1em;
             }
           }
+        }
+        .project-stack {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: left;
+          align-items: center;
+          p {
+              padding-right: 0.8em;
+              font-size: 0.8em;
+            }
         }
       }
     }
