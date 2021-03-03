@@ -14,8 +14,8 @@
         </li>
       </ul>
     </div>
-    <div v-for="project in projects" :key="project.id" class="projects">
-      <div class="project">
+    <div class="projects">
+      <div v-for="project in projects" :key="project.name" class="project">
         <div class="project-image">
           <img :src="project.cover.url" alt="Project Image">
         </div>
@@ -28,11 +28,17 @@
               <a v-if="link.name === 'link'" :href="link.address" title="Web" target="_blank">
                 <IconifyIcon :icon="icons.earthEuropeAfricaFilled" size="32" />
               </a>
-              <a v-if="link.name === 'zindi'" :href="link.address" title="Github" target="_blank">
+              <a v-if="link.name === 'zindi'" :href="link.address" title="Zindi" target="_blank">
                 <IconifyIcon :icon="icons.alphaZBox" size="32" />
               </a>
               <a v-if="link.name === 'github'" :href="link.address" title="Github" target="_blank">
                 <IconifyIcon :icon="icons.githubIcon" size="32" />
+              </a>
+              <a v-if="link.name === 'codepen'" :href="link.address" title="CodePen" target="_blank">
+                <IconifyIcon :icon="icons.codepenCircleFilled" size="32" />
+              </a>
+              <a v-if="link.name === 'blog'" :href="link.address" title="Dev" target="_blank">
+                <IconifyIcon :icon="icons.blogIcon" size="32" />
               </a>
             </div>
           </div>
@@ -57,7 +63,10 @@ import IconifyIcon from '@iconify/vue'
 import githubIcon from '@iconify/icons-brandico/github'
 import earthEuropeAfricaFilled from '@iconify/icons-carbon/earth-europe-africa-filled'
 import alphaZBox from '@iconify/icons-mdi/alpha-z-box'
+import blogIcon from '@iconify/icons-carbon/blog'
+import codepenCircleFilled from '@iconify/icons-ant-design/codepen-circle-filled'
 import getFeaturedProjects from '~/apollo/queries/project/getFeaturedProjects'
+
 export default {
   components: {
     IconifyIcon
@@ -67,7 +76,9 @@ export default {
       icons: {
         earthEuropeAfricaFilled,
         githubIcon,
-        alphaZBox
+        alphaZBox,
+        blogIcon,
+        codepenCircleFilled
       },
       projects: [],
       query: ''
@@ -113,16 +124,19 @@ export default {
     padding: 3em;
 
     .project {
+      grid-column: span 2;
       display: flex;
-      flex-flow: row wrap;
+      flex-flow: row;
       justify-content: center;
       align-items: center;
 
       .project-image {
         padding: 0.5em;
         img {
-          height: 15em;
-          width: 15em;
+          width: 100%;
+          height: 100%;
+          max-height: 15em;
+          max-width: 15em;
         }
       }
       .project-text {
