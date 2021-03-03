@@ -33,7 +33,9 @@
             </div>
           </div>
           <div class="project-description">
-            {{ project.description }}
+            <div class="des-text">
+              <p>{{ project.description }}</p>
+            </div>
           </div>
           <div class="project-stack">
             {{ project.techAndLinks.tech }}
@@ -124,13 +126,29 @@ export default {
           justify-content: flex-start;
           align-items: left;
 
-          .project-link{
+          .project-link {
             padding-right: 0.5em;
 
             a {
               &:hover {
                 color: $accent-color-2;
               }
+            }
+          }
+        }
+        .project-description {
+          padding: 0.5em 0 0.5em 0;
+
+          .des-text {
+            border-radius: 0.5em;
+            box-shadow: 0.08em 0.08em 0.08em 0.08em var(--box-shadow);
+            background: var(--tech-background);
+
+            p {
+              padding: 0.3em;
+              text-align: justify;
+              text-justify: inter-word;
+              font-size: 1em;
             }
           }
         }
