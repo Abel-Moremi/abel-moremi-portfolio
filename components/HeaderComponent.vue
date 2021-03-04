@@ -73,6 +73,7 @@ export default {
     text-align: center;
     width: 100%;
     position: fixed;
+    z-index: 1;
 
     .navbar{
       display: flex;

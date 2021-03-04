@@ -1,44 +1,42 @@
 <template>
   <div class="hero">
     <div class="hero-text">
-      <nav>
-        <ul>
-          <li>
-            <p class="name-span">
-              ABEL MOREMI
-            </p>
-          </li>
-          <li>
-            <p class="title">
-              FULL-STACK DEVELOPER
-            </p>
-          </li>
-          <li>
-            <p class="title">
-              DATA SCIENCE ENTHUSIAST
-            </p>
-          </li>
-          <li class="button">
-            <a :href="resume.resumePDF.url" target="_blank">
-              <div class="button-outer">
-                <div class="button-inner">
-                  <IconifyIcon :icon="icons.arrowDownload16Filled" :height="16" />
-                  <p>RESUME</p>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <div class="links">
-              <div v-for="link in links" :key="link.icon">
-                <a :href="link.href" :title="link.title" target="_blank">
-                  <IconifyIcon :icon="link.icon" :height="link.size" />
-                </a>
+      <ul>
+        <li>
+          <p class="name-span">
+            ABEL MOREMI
+          </p>
+        </li>
+        <li>
+          <p class="title">
+            FULL-STACK DEVELOPER
+          </p>
+        </li>
+        <li>
+          <p class="title">
+            DATA SCIENCE ENTHUSIAST
+          </p>
+        </li>
+        <li class="button">
+          <a :href="resume.resumePDF.url" target="_blank">
+            <div class="button-outer">
+              <div class="button-inner">
+                <IconifyIcon :icon="icons.arrowDownload16Filled" :height="16" />
+                <p>RESUME</p>
               </div>
             </div>
-          </li>
-        </ul>
-      </nav>
+          </a>
+        </li>
+        <li>
+          <div class="links">
+            <div v-for="link in links" :key="link.icon">
+              <a :href="link.href" :title="link.title" target="_blank">
+                <IconifyIcon :icon="link.icon" :height="link.size" />
+              </a>
+            </div>
+          </div>
+        </li>
+      </ul>
     </div>
     <div class="hero-image">
       <ColorScheme placeholder="..." tag="span">
