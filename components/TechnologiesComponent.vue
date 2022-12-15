@@ -50,6 +50,7 @@ import pytorchIcon from '@iconify/icons-cib/pytorch'
 import scikitLearn from '@iconify/icons-simple-icons/scikit-learn'
 import sqlIcon from '@iconify/icons-carbon/sql'
 import postgresqlIcon from '@iconify/icons-cib/postgresql'
+import azureIcon from '@iconify/icons-cib/microsoft-azure'
 
 export default {
   components: {
@@ -78,7 +79,8 @@ export default {
         { icon: pytorchIcon, size: '50', title: 'PyTorch' },
         { icon: scikitLearn, size: '50', title: 'Scikit-Learn' },
         { icon: sqlIcon, size: '50', title: 'SQL' },
-        { icon: postgresqlIcon, size: '50', title: 'SQL' }
+        { icon: postgresqlIcon, size: '50', title: 'SQL' },
+        { icon: azureIcon, size: '50', title: 'Azure'}
       ]
     }
   }
