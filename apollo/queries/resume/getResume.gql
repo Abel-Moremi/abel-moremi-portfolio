@@ -1,7 +1,0 @@
-query getResume {  
-  resume {
-    resumePDF {
-      url  
-    }
-  }
-}
